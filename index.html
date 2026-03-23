@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ti ❤️</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#0d0d2b, #1a1a40);
+  overflow: hidden;
+  font-family: 'Georgia', serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* luces tipo Rapunzel */
+.lantern {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ffd27f;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ffcc66;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Hola mi amor…</h1>
+
+<p>
+Han pasado 6 años desde que comenzamos este camino juntos,<br><br>
+
+y si algo tengo claro, es que no han sido años cualquiera…<br>
+han sido años de amor, de luchas, de caídas y de levantarnos juntos.<br><br>
+
+Tú has sido ese pilar en mi vida,<br>
+la persona que me impulsa a ser un mejor hombre.<br><br>
+
+El 07/10/2020 no es solo una fecha…<br>
+es un momento que vive en mí contigo.<br><br>
+
+El 19 y el 03… son parte de nuestra historia.<br><br>
+
+Y si tuviera que decirlo simple:<br>
+eres lo más lindo que tengo en esta vida.<br><br>
+
+Te amo… y te sigo eligiendo.<br>
+Siempre.
+</p>
+</div>
+
+<script>
+// crear luces flotantes
+for (let i = 0; i < 40; i++) {
+  let lantern = document.createElement("div");
+  lantern.className = "lantern";
+  lantern.style.left = Math.random() * 100 + "vw";
+  lantern.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.body.appendChild(lantern);
+}
+</script>
+
+</body>
+</html>
